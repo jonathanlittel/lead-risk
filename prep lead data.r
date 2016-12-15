@@ -33,9 +33,7 @@ df.lead <- pd_data %>%
 
 # pre process
 
-df.lead <- preProcess(train)
-
-qualification_cutoff <- 0.10
+qualification_cutoff <- 0.08
 
 df.lead$preq_lgl <- df.lead$pd_one_year < qualification_cutoff
 df.lead$preq <- factor(as.numeric(df.lead$preq_lgl),
